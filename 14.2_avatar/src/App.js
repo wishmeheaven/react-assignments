@@ -50,9 +50,10 @@ function App() {
         style={{ backgroundColor: inputColor }} // set background color dynamically
       />
       <div className="container">
-        {filteredAvatars.map((avatar, idx) => (
-          <div className={`ohMyCard ${avatar.gender === 'male' ? 'male' : 'female'}`}>          <Card
-            key={idx}
+        {filteredAvatars.map((avatar) => (
+          <div className={`ohMyCard ${avatar.gender === 'male' ? 'male' : 'female'}`}>          
+          <Card
+            key={avatar.id.value}
             image={avatar.picture.medium}
             name={avatar.name.first + " " + avatar.name.last}
           />
